@@ -1,3 +1,9 @@
+### Project specific
+# PNGs generated from MNIST database
+examples/supervised/handwriting/test/*/*.png
+examples/supervised/handwriting/train/*/*.png
+# Python virtual environment
+**/venv
 
 # Created by https://www.gitignore.io/api/python,pycharm,jetbrains
 # Edit at https://www.gitignore.io/?templates=python,pycharm,jetbrains
