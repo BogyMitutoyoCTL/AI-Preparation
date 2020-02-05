@@ -1,10 +1,10 @@
 import os
 from os import path
-
 import PIL.ImageOps
 import imageio
 import tensorflow
 from PIL import Image
+
 
 def mkdir_anyway(path: str) -> None:
     try:
@@ -26,7 +26,7 @@ handwriting = tensorflow.keras.datasets.mnist
 (x_train, y_train), (x_test, y_test) = handwriting.load_data()
 
 
-def save_images(destination:str, imagedata:list, classifications:list):
+def save_images(destination: str, imagedata: list, classifications: list):
     count_per_image = [0] * 10
     for i in range(len(imagedata)):
         image = imagedata[i]
@@ -40,5 +40,5 @@ def save_images(destination:str, imagedata:list, classifications:list):
         imageio.imwrite(filename, image)
 
 
-save_images("train", x_train,  y_train)
-save_images("test", x_test,  y_test)
+save_images("train", x_train, y_train)
+save_images("test", x_test, y_test)
