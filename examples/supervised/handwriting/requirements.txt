@@ -1,0 +1,23 @@
+imageai
+imageio
+
+gym
+pygame
+scipy
+keras
+# We will use tensorflow 1.14, because for releases 1.14 and older, CPU and GPU packages are separate
+# tensorflow==1.14 —Release for CPU-only
+# tensorflow-gpu==1.14 —Release with GPU support (Ubuntu and Windows)
+
+# Also use an older numpy version to not get the future warnings from deprecated functions in newest numpy from
+# calls from the older tensorflow.
+numpy==1.16.6
+
+# TW: Setuptools 44.0 is available, but does not work with Tensorflow 1.14
+setuptools==40.8
+
+
+tensorflow==1.14
+
+# TW: provides DQNAgent
+keras-rl
