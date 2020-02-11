@@ -1,5 +1,5 @@
 # AI-Preparation
-Vorbereitung auf die Umsetzung von Machine Learning für das Spiel "Snake".
+Vorbereitung auf die Umsetzung von Machine Learning (eine Untermenge von künstlicher Intelligenz) für das Spiel "Snake".
 
 Dieses Projekt entstand als Teil der Berufsorientierung für Gymnasien (BOGY) für das [Leibnitz-Gymnasium in Rottweil](https://lg.rw.schule-bw.de/home/?page_id=11268) im Schuljahr 2019/2020. Als Firmenpartner steht [Mitutoyo CTL in Oberndorf](http://www.mitutoyo-ctl.de/de/karriere/ausbildungundstudium) mit Hardware, Räumlichkeiten und Ansprechpartnern zur Verfügung.
 
@@ -21,6 +21,30 @@ Am ersten Nachmittag haben wir uns zunächst vorgestellt und dann durch die Firm
 Die [Firmenpräsentation](presentation/Firmenpräsentation.pptx) ging noch etwas darüber hinaus und erklärt unser Motto, nennt die von uns entwickelte Software, erklärt das duale Studium und zeigt Beispiele von Praktikumsprojekten.
 
 Wir haben uns die Hardware angeschaut, auf dem wir das Projekt durchführen möchten. Es handelt sich um einen [Raspberry Pi 4](presentation/Raspberry%20Hardware.pptx), der Dank der Speichererweiterung auf 4 GB auch größere Datenmengen verarbeiten kann, wie sie bei Machine Learning auftreten.
+
+Dann haben wir uns mit dem Thema der Berufsorientierung auseinandergesetzt. Das Spielprinzip ist vermutlich hinreichend bekannt: es handelt sich um ein Snake-Spiel. Die Schlange (grün) frisst mit ihrem Kopf (blau) einen Apfel (rot) und wächst dabei. Zum Glück sind wir hier nicht an fächerübergreifenden Unterricht gebunden, ansonsten müsste man sich fragen, seit wann Schlangen vegetarisch sind (Biologie) und ob nicht Adam und Eva den Apfel gegessen haben, anstatt der Schlange (Religion).
+
+Die von uns bereitgestellte Spieleumgebung ist bereits auf KI-Experimente vorbereitet, d.h. ein beliebiger Algorithmus kann in der Umgebung mehrere Spiele nacheinander ohne menschliches Zutun spielen. Zur Spieleumgebung gibt es eine Visualisierung, die folgendermaßen aufgebaut ist:
+
+* der linke Bereich liefert statistische Daten
+  * grün: Daten zur Visualisierung, derzeit nur die aktuelle Visualisierungsgeschwindigkeit in Bildern pro Sekunde (fps; frames per second)
+  * hellblau: Daten zum Training, d.h. mehrere Spiele übergreifend
+  * violett: Daten zum aktuell laufenden Spiel. Ein Teil dieser Daten könnte als Input für Neuronen dienen.
+* der rechte Bereich visualisiert das Spielfeld
+  * rot: das Futter (angeblich ein Apfel)
+  * blau: der Kopf der Schlange
+  * grün: Körper der Schlange, wobei die hellere Teile früher verschwinden als dunklere Teile
+
+Im Bild sieht man einen von Mitutoyo programmierten Algorithmus, der noch keine künstliche Intelligenz nutzt. Dabei handelt es sich bewusst um einen Algorithmus, der nicht mathematisch als perfekt bewiesen ist. Unsere KI wird sich mit diesem Algorithmus messen müssen. Bei 1000 Spielen erreicht er eine Länge von bis zu 80 Kästchen, was einer Abdeckung von 40% der Fläche entspricht. 
+
+![Snake Spiel](images/Snake.png)
+
+Hausaufgaben:
+
+* Github Account einrichten, damit wir später gemeinsam an einem Projekt arbeiten können
+* Fotofreigabe von den Eltern ausfüllen und unterschreiben lassen
+* der Whatsapp-Gruppe für das Praktikum beitreten
+* bei Interesse unserem [Instagram Account](https://www.instagram.com/mitutoyoctlg/) folgen.
 
 # Projekt-Umgebung
 
