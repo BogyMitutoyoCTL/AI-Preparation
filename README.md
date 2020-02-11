@@ -12,9 +12,17 @@ Inspiration für dieses Projekt war das [Leibniz Forschungszentrum](https://lg.r
 
 Aus diesem Grund haben wir uns entschlossen, zwar ein Machine Learning Projekt durchzuführen, aber die Bedingungen zu unseren Gunsten anzupassen. Entstanden ist ein Snake-Spiel, bei dem der Computer selbst die Spielregeln erlernen soll.
 
-## Hardware
+# Vorbereitung / Einführung
 
-Als Hardware verwenden wir den neuen [Raspberry Pi 4](https://www.raspberrypi.org/), der Dank der Speichererweiterung auf 4 GB auch größere Datenmengen verarbeiten kann, wie sie bei Machine Learning auftreten.
+## Erster Nachmittag, 12.2.2020
+
+Am ersten Nachmittag haben wir uns zunächst vorgestellt und dann durch die Firma geführt, um die Räumlichkeiten kennenzulernen.
+
+Die [Firmenpräsentation](presentation/Firmenpräsentation.pptx) ging noch etwas darüber hinaus und erklärt unser Motto, nennt die von uns entwickelte Software, erklärt das duale Studium und zeigt Beispiele von Praktikumsprojekten.
+
+Wir haben uns die Hardware angeschaut, auf dem wir das Projekt durchführen möchten. Es handelt sich um einen [Raspberry Pi 4](presentation/Raspberry%20Hardware.pptx), der Dank der Speichererweiterung auf 4 GB auch größere Datenmengen verarbeiten kann, wie sie bei Machine Learning auftreten.
+
+# Projekt-Umgebung
 
 ## Software
 
@@ -32,9 +40,4 @@ Im Rahmen des Projekts erzeugen sich die Daten aus dem Spielverlauf selbst.
 Zum Verständnis der unterschiedlichen Arten von Machine Learning verwenden wir jedoch auch:
 
 * die [MNIST Datenbank von handgeschriebenen Ziffern](http://www.pymvpa.org/datadb/mnist.html), lizensiert unter [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
-
-
-# Vorbereitung / Einführung
-
-## Erster Nachmittag, 12.2.2020
 
