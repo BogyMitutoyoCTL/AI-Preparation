@@ -51,13 +51,23 @@ Hausaufgaben:
 
 ## Zweiter Nachmittag, 19.2.2020
 
-Wie bereits am ersten Tag kurz vorgestellt, haben wir ein "Daily Scrum" Meeting durchgeführt, d.h. ein Meeting am Stehtisch. Die Themen im BOGY weichen etwas von den üblichen Fragen für Entwickler ab. Wir wollten wissen, ob die Hausaufgaben erledigt sind und ob es sonstige Vorkommnisse gab, die das BOGY betreffen könnten.
+Wie bereits am ersten Tag kurz vorgestellt, haben wir ein "Daily Scrum" Meeting durchgeführt. Die Themen im BOGY weichen etwas von den üblichen Fragen für Entwickler ab. Wir wollten wissen, ob die Hausaufgaben erledigt sind und ob es sonstige Vorkommnisse gab, die das BOGY betreffen könnten.
 
 Bereits am ersten Nachmittag haben wir zum Schluss den Raspberry Pi in Betrieb genommen und die Oberfläche vom Betriebssystem Raspbian kennengelernt. Heute haben wir uns etwas mehr mit den Innereien von Linux beschäftigt: Die [Linux Präsentation](presentation/Linux.pptx) erklärt den grundsätzlichen Aufbau, ist allerdings theoretischer Natur. Daher haben wir diese Präsentation gekürzt, indem wir Teile in ausgeblendeten Folien versteckt haben. Die [Bash Präsentation](presentation/Bash.pptx) zeigt, was man auf er Linux Kommandozeile alles tun kann und hat den deutlich höheren Praxisanteil. 
 
 Wir schließen diese beiden Teile ab mit der Behauptung: wer ein guter Hacker werden möchte, kommt um Linux nicht herum. (Der Begriff Hacker wird hier in seinem positiven Sinn als Tüftler mit Sinn für kreativen Umgang mit Technik verstanden)
 
-Uns blieb dann noch Zeit für die [Einführung in PyCharm](presentation/Pycharm.pptx). Da wir PyCharm bereits auf dem Raspberry Pi installiert hatten, haben wir den Installations-Teil übersprungen (Anleitung verbleibt auch hier in versteckten Folien) und haben uns ganz auf die Features dieser IDE (Integrated Development Environment) konzentriert.
+## Dritter Nachmittag, 26.2.2020
+
+Wir starteten mit der [Einführung in PyCharm](presentation/Pycharm.pptx). Da wir PyCharm bereits auf dem Raspberry Pi installiert hatten, haben wir den Installations-Teil übersprungen (die Anleitung verbleibt auch hier in versteckten Folien) und haben uns ganz auf die Features dieser IDE (Integrated Development Environment) konzentriert.
+
+Danach legten wir los mit den ersten Schritten in der [Programmiersprache Python](presentation/Python%20Einführung.pptx), um Unterschiede zu anderen Programmeirsprachen kennen zu lernen und mit der Syntax vertraut zu werden.
+
+Hausaufgaben:
+
+* Python 3 zu Hause installieren
+* [PyCharm Community Edition](https://www.jetbrains.com/de-de/pycharm/download/#section=windows) zu Hause installieren
+* bei Interesse eine mathematische [Aufgabe von Project Euler](https://projecteuler.net/archives) lösen
 
 
 
