@@ -59,17 +59,15 @@ Wir schließen diese beiden Teile ab mit der Behauptung: wer ein guter Hacker we
 
 ## Dritter Nachmittag, 26.2.2020
 
-Wir starteten mit der [Einführung in PyCharm](presentation/Pycharm.pptx). Da wir PyCharm bereits auf dem Raspberry Pi installiert hatten, haben wir den Installations-Teil übersprungen (die Anleitung verbleibt auch hier in versteckten Folien) und haben uns ganz auf die Features dieser IDE (Integrated Development Environment) konzentriert.
+Wir starteten mit der [Einführung in PyCharm](presentation/Pycharm.pptx). Da wir PyCharm bereits auf dem Raspberry Pi installiert hatten, haben wir den Installations-Teil übersprungen (die Anleitung verbleibt in versteckten Folien) und haben uns ganz auf die Features dieser IDE (Integrated Development Environment) konzentriert.
 
-Danach legten wir los mit den ersten Schritten in der [Programmiersprache Python](presentation/Python%20Einführung.pptx), um Unterschiede zu anderen Programmeirsprachen kennen zu lernen und mit der Syntax vertraut zu werden.
+Danach legten wir los mit den ersten Schritten in der [Programmiersprache Python](presentation/Python%20Einführung.pptx), um Unterschiede zu anderen Programmiersprachen kennen zu lernen und mit der Syntax vertraut zu werden.
 
 Hausaufgaben:
 
 * Python 3 zu Hause installieren
 * [PyCharm Community Edition](https://www.jetbrains.com/de-de/pycharm/download/#section=windows) zu Hause installieren
 * bei Interesse eine mathematische [Aufgabe von Project Euler](https://projecteuler.net/archives) lösen
-
-
 
 # Projekt-Umgebung
 
