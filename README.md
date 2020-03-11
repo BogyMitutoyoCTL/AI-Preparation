@@ -75,7 +75,7 @@ Hausaufgaben:
 
 Beim Standup Meeting haben wir uns erkundigt, ob die Hausaufgaben Probleme bereitet haben. Dann haben wir bei Folie 44 der [Python Präsentation](presentation/Python%20Einführung.pptx) weitergemacht, wo wir letztes Mal aus Zeitgründen aufgehört haben.
 
-Hinzu kam dann eine Einführung in [Objektorientierung mit Python](presentation/Python Objektorientierung.pptx).
+Hinzu kam dann eine Einführung in [Objektorientierung mit Python](presentation/Python%20Objektorientierung.pptx).
 
 # Projekt-Umgebung
 
