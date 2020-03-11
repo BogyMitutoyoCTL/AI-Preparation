@@ -57,7 +57,7 @@ Bereits am ersten Nachmittag haben wir zum Schluss den Raspberry Pi in Betrieb g
 
 Wir schließen diese beiden Teile ab mit der Behauptung: wer ein guter Hacker werden möchte, kommt um Linux nicht herum. (Der Begriff Hacker wird hier in seinem positiven Sinn als Tüftler mit Sinn für kreativen Umgang mit Technik verstanden)
 
-## Dritter Nachmittag, 26.2.2020
+## Dritter Nachmittag, 4.3.2020
 
 Wir starteten mit der [Einführung in PyCharm](presentation/Pycharm.pptx). Da wir PyCharm bereits auf dem Raspberry Pi installiert hatten, haben wir den Installations-Teil übersprungen (die Anleitung verbleibt in versteckten Folien) und haben uns ganz auf die Features dieser IDE (Integrated Development Environment) konzentriert.
 
@@ -66,8 +66,16 @@ Danach legten wir los mit den ersten Schritten in der [Programmiersprache Python
 Hausaufgaben:
 
 * Python 3 zu Hause installieren
+
 * [PyCharm Community Edition](https://www.jetbrains.com/de-de/pycharm/download/#section=windows) zu Hause installieren
+
 * bei Interesse eine mathematische [Aufgabe von Project Euler](https://projecteuler.net/archives) lösen
+
+## Vierter Nachmittag, 11.3.2020
+
+Beim Standup Meeting haben wir uns erkundigt, ob die Hausaufgaben Probleme bereitet haben. Dann haben wir bei Folie 44 der [Python Präsentation](presentation/Python%20Einführung.pptx) weitergemacht, wo wir letztes Mal aus Zeitgründen aufgehört haben.
+
+Hinzu kam dann eine Einführung in [Objektorientierung mit Python](presentation/Python Objektorientierung.pptx).
 
 # Projekt-Umgebung
 
@@ -78,7 +86,7 @@ Wir verwenden kostenlose Software:
 * das Betriebssystem [Raspbian](https://www.raspberrypi.org/downloads/raspbian/)
 * die Programmiersprache [Python](https://www.python.org/)
 * die Bibliotheken [Tensorflow](https://www.tensorflow.org/), [Keras](https://keras.io/) und [OpenAI Gym](https://gym.openai.com/)
-* die Entwicklungsumgebung [PyCharm von JetBrains](https://www.jetbrains.com/de-de/pycharm/)
+* die Entwicklungsumgebung [PyCharm von JetBrains](https://www.jetbrains.com/de-de/pycharm/) (Community Edition)
 
 ## Daten
 
