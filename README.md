@@ -95,6 +95,8 @@ Wir verwenden kostenlose Software:
 
 * das Betriebssystem [Raspbian](https://www.raspberrypi.org/downloads/raspbian/)
 * die Programmiersprache [Python](https://www.python.org/)
+* die Versionsverwaltung [Git](https://git-scm.com/) mit dem Provider [Github](https://github.com/)
+* dazu unter Windows den [Editor Notepad++](https://notepad-plus-plus.org/) und das Difftool [Winmerge](https://winmerge.org/?lang=de)
 * die Bibliotheken [Tensorflow](https://www.tensorflow.org/), [Keras](https://keras.io/) und [OpenAI Gym](https://gym.openai.com/)
 * die Entwicklungsumgebung [PyCharm von JetBrains](https://www.jetbrains.com/de-de/pycharm/) (Community Edition)
 
