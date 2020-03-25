@@ -77,7 +77,7 @@ Beim Standup Meeting haben wir uns erkundigt, ob die Hausaufgaben Probleme berei
 
 Hinzu kam dann eine Einführung in [Objektorientierung mit Python](presentation/Python%20Objektorientierung.pptx). Dort kamen wir bis Folie 17 und haben mehrere tausend Hunde (Objekte vom Typ Hund) das virtuelle Licht der virtuellen Welt erblicken lassen. Es gab auch für uns Neues zu erlernen, z.B. dass es Jack Russel Jack Parson Terrier Mischlinge gibt.
 
-## Fünfter Nachmittag, 18.3.2002
+## Fünfter Nachmittag, 18.3.2020
 
 Aufgrund des Corona-Virus fiel die Berufsorientierung schulweit aus. Auch die Mitutoyo CTL Germany GmbH befand sich komplett im Home Office. Wir haben unser Team gefragt, ob es an einer Fortführung online interessiert wäre. Alle vier Teilnehmer waren dafür. Darüber freuten wir uns sehr 😊. Als Plattform haben wir [GotoMeeting](https://www.gotomeeting.com/de-de/meeting/meeting-beitreten?sc_lang=de-de) verwendet. Davon hat unsere Firma Lizenzen, so dass wir unbegrenzt konferieren konnten.
 
@@ -86,6 +86,28 @@ Wir haben mit der [Objektorientierung mit Python](presentation/Python%20Objektor
 Im Anschluss haben wir uns mit dem Thema [Versionskontrolle allgemein](presentation/Versionskontrolle.pptx) beschäftigt, bevor wir dann konkret auf Git eingegangen sind. Für den heutigen Tag haben wir extra eine Präsentation für [Git unter Windows](presentation/Git%20Grundlagen%20-%20Windows.pptx) angelegt. Normalerweise würden wir [Git für Linux](presentation/Git%20Grundlagen.pptx) erklären, da der Raspberry ein Linux Betriebssystem hat. Die Unterschiede halten sich in Grenzen. Es unterscheidet sich lediglich die Installation der Tools. 
 
 Wir finden Versionskontrolle praktisch und können nur empfehlen, das auch privat einzusetzen, beispielsweise für Ausarbeitungen im Rahmen einer GFS (gleichwertige Feststellung von Schülerleistungen).
+
+## Sechster Nachmittag, 25.3.2020
+
+Der heutige Tag befasste sich mit dem Thema [Künstliche Intelligenz](presentation/Künstliche%20Intelligenz.pptx). Ebenfalls in einer Online-Session haben wir geschaut, wie der Stand der Technik bei künstlicher Intelligenz ist, wo sich maschinelles Lernen in der Informatik einordnet und welche Probleme es dabei geben kann.
+
+Ebenfalls besprochen haben wir, wie wir in der Praktikumswoche verfahren möchten. Dieser Vorschlag kam von uns:
+
+* Wir treffen uns morgens um **9:00 Uhr** für eine gemeinsame Besprechung, ggf. mit Präsentation oder Erklärungen.
+
+* Danach gibt es eine Programmieraufgabe, die jeder daheim implementieren kann.
+
+* Bei Fragen und Problemen gibt es die Möglichkeit, die Betreuer bei Mitutoyo anzurufen.
+
+* Von 12:00 bis 13:00 Uhr ist Mittagspause
+
+* Um **13:00 Uhr** treffen wir uns wieder, um die Ergebnisse der Programmieraufgabe zu besprechen.
+
+* Direkt im Anschluss folgt wieder eine Präsentation o.ä., gefolgt von einer weiteren Programmieraufgabe, genau wie am Vormittag.
+
+* Um **16:30 Uhr** kommen wir wieder gemeinsam zusammen, um die Aufgabe zu besprechen.
+
+Da wir bei Mitutoyo nicht genügend GotoMeeting Lizenzen haben, um täglich drei Meetings online zu halten, haben wir die Firma [Discord](https://discordapp.com/) gefragt, ob wir für das Praktikum Discord auch kommerziell nutzen dürfen. Wir freuen uns über die Zusage.
 
 # Projekt-Umgebung
 
