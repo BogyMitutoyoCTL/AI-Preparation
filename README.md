@@ -292,12 +292,5 @@ Die Aufgabe ist bereits in der Präsentation beschrieben: schreibe eine Funktion
 * die Situation aus leeren und belegten Feldern in eine Zahl umrechnet
 * und dabei bestimmte Felder ausmaskieren (auslassen) kann
 
-### Aufgabe: Entscheidungen sammeln
 
-Wir haben ein Programm geschrieben, das Entscheidungen für bestimmte Situationen aufzeichnen und abspeichern kann. Dieses Programm ist kompatibel zu der Art und Weise, wie wir die Situation in eine Nummer umrechnen. Allerdings gilt es nun, 2^8 Felder * 5 Richtungen, also für 1280 Fälle die Entscheidungen einzusammeln. Diese Arbeit teilen wir uns. Damit wir eine Kontrolle haben, sollten sich die Fälle überlappen. Somit ergeben sich für jeden Schüler 640 Entscheidungen.
-
-* D⸻: Situation 0 bis 640
-* S⸻: Situation 0 bis 640
-* B⸻: Situation 641 bis 1280
-* N⸻: Situation 641 bis 1280
 
