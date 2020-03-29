@@ -18,7 +18,7 @@ class CombinationBuilder:
                 not_masked_indices.append(i)
             i = i + 1
 
-        number_combinations = pow(2, len(not_masked_indices) - 1)
+        number_combinations = pow(2, len(not_masked_indices))
 
         range_start = 0
         range_end = number_combinations

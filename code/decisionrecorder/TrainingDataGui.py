@@ -194,7 +194,7 @@ class TrainingDataGui(Frame):
             self.snake.set_board_configuration(combination.field)
             self.snake.set_direction(combination.food_direction)
 
-            self.label_information['text'] = str(new_combination) + "/" + str(len(self.combinations))
+            self.label_information['text'] = str(new_combination + 1) + "/" + str(len(self.combinations))
 
     def show(self):
         self.mainloop()
