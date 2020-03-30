@@ -7,14 +7,6 @@ BLOCKED = 2
 
 
 class LookAroundHead(Algorithm):
-    """
-    This algorithm implements the most obvious Hamilton cycle.
-    Thus, the result will be perfect, but the snake is very slow because it simply visits every available
-    pixel of the playfield to make sure it will eat the food eventually.
-
-    Best result: 47
-    """
-
     def __init__(self):
         super().__init__()
 
