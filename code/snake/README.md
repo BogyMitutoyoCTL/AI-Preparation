@@ -3,6 +3,7 @@
 ## Python unter Windows 10 installieren
 
 Für dieses Projekt brauchen wir Python 3.7! Python 3.8 funktioniert leider nicht, weil Tensorflow dafür noch nicht vorbereitet ist.
+Außerdem wird zwingend die 64-Bit Version von Python 3.7 benötigt.
 
 Python kann hier heruntergeladen werden: https://www.python.org/downloads/
 
