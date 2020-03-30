@@ -187,7 +187,7 @@ Damit man sich nicht blind für eine Aktion entscheiden muss, bekommt man für d
 * `direction`: Aktuelle Laufrichtung der Schlange
 * `food_x` und `food_y`: wo sich das Futter befindet
 * `food_direction`: Richtung, in der sich das Futter befindet. Die Winkel sind dabei wie folgt:
-  ![Richtungen](D:\Projekte non-backup\Github\AI-Preparation\images\directions.png)
+  ![Richtungen](images/directions.png)
 * `food_distance_in_steps`: Schritte bis zum Futter (kürzester Weg, ohne Berücksichtigung von Hindernissen)
 * `air_line_distance`: Abstand zum Futter in Kästchen (diagonal, Pythagoras)
 * `walldistance_`...: Abstand zur Wand (vom Kopf aus)
@@ -300,7 +300,7 @@ Wir haben ein Programm geschrieben, das Entscheidungen für bestimmte Situatione
 
 Die grafische Oberfläche dafür sieht folgendermaßen aus:
 
- ![Entscheidungs-Recorder](D:\Projekte non-backup\Github\AI-Preparation\images\decisionrecorder.png)
+ ![Entscheidungs-Recorder](images/decisionrecorder.png)
 
 Zu sehen ist ein 3x3 Ausschnitt aus dem Spielfeld. Der dunkelrote Winkel zeigt an, in welcher Richtung sich das Futter befindet. In diesem Fall liegt das Futter auf jeden Fall südlich, es könnte aber zusätzlich noch ein bisschen östlich liegen, vielleicht aber auch westlich. Dass der rote Ausschnitt eher nach Westen zeigt, ist dabei kein Anzeichen für eine höhere Wahrscheinlichkeit, dass das Futter im Westen liegt.
 
@@ -312,29 +312,28 @@ Welche Aktion die Schlange in dieser Situation auslösen soll, bestimmst Du. Fol
 Da der rote Bereich sowohl westlich als auch östlich liegt, ist weder Osten noch Westen im gezeigten Fall eine gute Wahl. Wenn die Schlange allerdings nach Süden fährt, wird irgendwann die Ausprägung zwischen Ost oder West deutlicher:
 
 * Verschiebung nach Osten, falls das Futter tatsächlich östlich lag:
-  ![](D:\Projekte non-backup\Github\AI-Preparation\images\ostverschiebung.png)
+  ![](images/ostverschiebung.png)
 
 * Verschiebung nach Westen, falls das Futter tatsächlich westlich lag:
-  ![](D:\Projekte non-backup\Github\AI-Preparation\images\westverschiebung.png)
+  ![](images/westverschiebung.png)
 
 Da das Programm alle Möglichkeiten durchgeht, können Situationen angezeigt werden, die im Spiel nie vorkommen können, beispielsweise:
 
- ![Unmögliche Situation](D:\Projekte non-backup\Github\AI-Preparation\images\impossible.png)
+ ![Unmögliche Situation](images/impossible.png)
 
 Es muss mindestens ein grünes Kästchen an das blaue Kästchen anschließen, da die Schlange nicht diagonal laufen kann. Für diesen Fall ist der Button "Impossible" gedacht.
 
 Beachte aber, dass nicht alle diagonal aussehenden Felder unmöglich sind. Folgendes Feld beispielsweise ist legal:
 
- ![Mögliches Spielfeld](D:\Projekte non-backup\Github\AI-Preparation\images\possible.png)
+ ![Mögliches Spielfeld](images/possible.png)
 
 weil das Spielfeld so aussehen könnte:
 
- ![](D:\Projekte non-backup\Github\AI-Preparation\images\possible_field.png)
+ ![](images/possible_field.png)
 
 Damit wir eine gegenseitige Kontrolle haben, sollten sich die Fälle überlappen. Somit ergeben sich für jeden Schüler 640 Entscheidungen.
 
 * D⸻: Situation 0 bis 640
-* S⸻: Situation 0 bis 640
 * B⸻: Situation 641 bis 1280
 * N⸻: Situation 641 bis 1280
 
