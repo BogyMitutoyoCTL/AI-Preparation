@@ -84,6 +84,7 @@ if __name__ == "__main__":
     reward_system.reward_killed_by_tail = -0.2
     reward_system.reward_killed_by_starving_function = lambda steps, length: -0.1 / length
     reward_system.reward_closer_function = lambda distance: 0.05 if distance> 0 else -0.05
+    reward_system.additional_steps_function = lambda width, height, length: (1 + length / 10) * (width + height) + 200
     env.reward = reward_system
 
     algorithm = choose_algorithm()
