@@ -1,5 +1,4 @@
 from random import random
-
 from GameData import GameData
 from Field import Field
 
