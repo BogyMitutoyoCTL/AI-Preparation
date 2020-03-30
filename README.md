@@ -187,7 +187,7 @@ Damit man sich nicht blind für eine Aktion entscheiden muss, bekommt man für d
 * `direction`: Aktuelle Laufrichtung der Schlange
 * `food_x` und `food_y`: wo sich das Futter befindet
 * `food_direction`: Richtung, in der sich das Futter befindet. Die Winkel sind dabei wie folgt:
-  ![Richtungen](D:\Projekte non-backup\Github\AI-Preparation\images\directions.png)
+  ![Richtungen](images/directions.png)
 * `food_distance_in_steps`: Schritte bis zum Futter (kürzester Weg, ohne Berücksichtigung von Hindernissen)
 * `air_line_distance`: Abstand zum Futter in Kästchen (diagonal, Pythagoras)
 * `walldistance_`...: Abstand zur Wand (vom Kopf aus)
@@ -203,7 +203,7 @@ Ebenfalls nützlich sind einige Funktionen:
 
 Das Spielfeld ist dabei folgendermaßen aufgebaut:
 
-​    ![Aufbau des Spielfelds](D:\Projekte non-backup\Github\AI-Preparation\images\playground.png)
+​    ![Aufbau des Spielfelds](images/playground.png)
 
 Diese Richtung der Achsen ist in der Bildverarbeitung üblich. Euer Monitor hat z.B. ebenfalls die Ecke P(0|0) oben links.
 
@@ -230,13 +230,12 @@ Die Klassen `Snake`, `Field`,`SnakeGym`, `Algorithm`, `RotateForever`, `RandomCh
 
 Wir haben gemeinsam ausprobiert, was die Ergebnisse des `RandomChoice` Algorithmus sind. Unsere späteren Ergebnisse sollten auf jeden Fall besser sein als Zufall.
 
-Ergebnisse nach 1000 Epochen (1000 Spielen):
+Ergebnisse nach 100 Epochen (100 Spielen):
 
-* T⸻: bestes Ergebnis: 5, max. gelaufene Schritte: 131, Gesamtmenge gegessen: 125, Gesamtanzahl Schritte: 31700
-* D⸻: bestes Ergebnis
-* S⸻: bestes Ergebnis
-* B⸻: bestes Ergebnis
-* N⸻: bestes Ergebnis
+* T⸻: bestes Ergebnis: 5, max. gelaufene Schritte: 107, Gesamtmenge gegessen: 12, Gesamtanzahl Schritte: 3003
+* D⸻: bestes Ergebnis: 4, max. gelaufene Schritte: 118, Gesamtmenge gegessen: 18, Gesamtanzahl Schritte: 3269
+* B⸻: bestes Ergebnis: 4, max. gelaufene Schritte: 118, Gesamtmenge gegessen: 9, Gesamtanzahl Schritte: 3247
+* N⸻: bestes Ergebnis: 4, max. gelaufene Schritte: 105, Gesamtmenge gegessen:7, Gesamtanzahl Schritte: 3138
 
 ### Aufgabe: schreibe einen Algorithmus
 
@@ -256,3 +255,41 @@ class B⸻(Algorithm):  # Passe den Klassen-Namen hier an
     def decide(self, info: GameData) -> str:
         # Programmiere hier
 ```
+
+## Montag Nachmittag
+
+Am Nachmittag haben wir wieder online konferiert und unsere Erfahrungen mit dem Programmieren eines eigenen Algorithmus besprochen.
+
+### Ausprobieren
+
+Wir haben gemeinsam verglichen, was die Ergebnisse unserer eigenen Algorithmen sind.
+
+* unser Student: bestes Ergebnis: 56 in 80 Spielen, max. gelaufene Schritte: 925, Gesamtmenge gegessen: ca. 2100, Gesamtanzahl Schritte: ca. 30000, Anzahl der `if` Anweisungen: 12.
+  Und er wird auch nicht mehr besser: gleiches Ergebnis bei 1000 Spielen / 24703 Essen / 379.473 Schritten
+* D⸻: bestes Ergebnis
+* S⸻: bestes Ergebnis
+* B⸻: bestes Ergebnis
+* N⸻: bestes Ergebnis
+
+In der Regel kann man erkennen, dass das Ergebnis besser wird, je mehr Bedingungen oder Situationen im Algorithmus berücksichtigt werden. Das drückt sich häufig durch die Anzahl der `if`/`elif` Abfragen aus.
+
+### Spaghetti-Code?
+
+Gleichzeitig merkt man beim Programmieren aber auch, dass es immer schwieriger wird, die richtige Stelle zu finden, an der man noch weiter verbessern kann. Bei Programmierern mit wenig Erfahrung kann das schnell zu so genanntem Spaghetti Code führen. Als Spaghetti Code wird Quellcode bezeichnet, der in sich verstrickt ist. 
+
+Bei Spaghetti Code ist oft nicht klar, was alles passiert, wenn man an einer Stelle etwas ändert. Und man muss sich fragen, ob man selbst das Programm noch verstehen würde, wenn man es in einem halben Jahr noch einmal liest.
+
+Damit das nicht passiert, haben sich ein paar Regeln und Konzepte gebildet. Einerseits gibt es so genannte Entwurfsmuster (engl. *patterns*), mit denen man bestimmte Probleme lösen kann, zum anderen gibt es eine Initiative namens *Clean Code*, die zumindest Hinweise gibt, was man tun bzw. nicht tun sollte. Und wenn man dann nicht weiter weiß, sollte man einen Entwickler fragen, der mehr Erfahrung hat und vielleicht einen gute Tipp auf Lager hat, wie der Spaghetti Code ordentlicher aussehen könnte.
+
+Die Präsentation [Von der Spaghetti-Schlange zu Q-Tables](presentation/Von%20der%20Spaghetti-Schlange%20zu%20Q-Tables.pptx) stellt die Problematik vor und schlägt eine Lösung vor.
+
+### Aufgabe: Umrechnung einer Situation in eine Nummer
+
+Die Aufgabe ist bereits in der Präsentation beschrieben: schreibe eine Funktion, die 
+
+* einen Ausschnitt aus dem Spielfeld um den Kopf herum in Betracht zieht
+* die Situation aus leeren und belegten Feldern in eine Zahl umrechnet
+* und dabei bestimmte Felder ausmaskieren (auslassen) kann
+
+
+
