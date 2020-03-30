@@ -266,10 +266,9 @@ Wir haben gemeinsam verglichen, was die Ergebnisse unserer eigenen Algorithmen s
 
 * unser Student: bestes Ergebnis: 56 in 80 Spielen, max. gelaufene Schritte: 925, Gesamtmenge gegessen: ca. 2100, Gesamtanzahl Schritte: ca. 30000, Anzahl der `if` Anweisungen: 12.
   Und er wird auch nicht mehr besser: gleiches Ergebnis bei 1000 Spielen / 24703 Essen / 379.473 Schritten
-* D⸻: bestes Ergebnis
-* S⸻: bestes Ergebnis
-* B⸻: bestes Ergebnis
-* N⸻: bestes Ergebnis
+* D⸻: bestes Ergebnis 15 in 100 Spielen, max. Schritte 604, Gesamtmenge Futter: 329, Gesamt-Schritte: 18957, Anzahl der `if`-Anweisungen: 3
+* B⸻: bestes Ergebnis 5 in 100 Spielen, max. Schritte 205, Gesamtmenge Futter: 22, Gesamt-Schritte: 12727, Anzahl der `if`-Anweisungen: 5
+* N⸻: bestes Ergebnis 11 in 100 Spielen, max. Schritte 412, Gesamtmenge Futter: 76, Gesamt-Schritte: 8940, Anzahl der `if`-Anweisungen: 8
 
 In der Regel kann man erkennen, dass das Ergebnis besser wird, je mehr Bedingungen oder Situationen im Algorithmus berücksichtigt werden. Das drückt sich häufig durch die Anzahl der `if`/`elif` Abfragen aus.
 
