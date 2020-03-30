@@ -230,13 +230,12 @@ Die Klassen `Snake`, `Field`,`SnakeGym`, `Algorithm`, `RotateForever`, `RandomCh
 
 Wir haben gemeinsam ausprobiert, was die Ergebnisse des `RandomChoice` Algorithmus sind. Unsere späteren Ergebnisse sollten auf jeden Fall besser sein als Zufall.
 
-Ergebnisse nach 1000 Epochen (1000 Spielen):
+Ergebnisse nach 100 Epochen (100 Spielen):
 
-* T⸻: bestes Ergebnis: 5, max. gelaufene Schritte: 131, Gesamtmenge gegessen: 125, Gesamtanzahl Schritte: 31700
-* D⸻: bestes Ergebnis
-* S⸻: bestes Ergebnis
-* B⸻: bestes Ergebnis
-* N⸻: bestes Ergebnis
+* T⸻: bestes Ergebnis: 5, max. gelaufene Schritte: 107, Gesamtmenge gegessen: 12, Gesamtanzahl Schritte: 3003
+* D⸻: bestes Ergebnis: 4, max. gelaufene Schritte: 118, Gesamtmenge gegessen: 18, Gesamtanzahl Schritte: 3269
+* B⸻: bestes Ergebnis: 4, max. gelaufene Schritte: 118, Gesamtmenge gegessen: 9, Gesamtanzahl Schritte: 3247
+* N⸻: bestes Ergebnis: 4, max. gelaufene Schritte: 105, Gesamtmenge gegessen:7, Gesamtanzahl Schritte: 3138
 
 ### Aufgabe: schreibe einen Algorithmus
 
