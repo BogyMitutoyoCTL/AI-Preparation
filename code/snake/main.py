@@ -63,7 +63,7 @@ def show_gui(state):
         else:
             algorithm.visualize(state, env.training_data)
 
-        pygame.time.Clock().tick(100)
+        pygame.time.Clock().tick(1000)
         pygame.event.pump()
         time_of_last_visualization = datetime.now()
 
