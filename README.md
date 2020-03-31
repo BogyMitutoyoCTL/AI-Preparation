@@ -266,10 +266,9 @@ Wir haben gemeinsam verglichen, was die Ergebnisse unserer eigenen Algorithmen s
 
 * unser Student: bestes Ergebnis: 56 in 80 Spielen, max. gelaufene Schritte: 925, Gesamtmenge gegessen: ca. 2100, Gesamtanzahl Schritte: ca. 30000, Anzahl der `if` Anweisungen: 12.
   Und er wird auch nicht mehr besser: gleiches Ergebnis bei 1000 Spielen / 24703 Essen / 379.473 Schritten
-* D⸻: bestes Ergebnis
-* S⸻: bestes Ergebnis
-* B⸻: bestes Ergebnis
-* N⸻: bestes Ergebnis
+* D⸻: bestes Ergebnis 15 in 100 Spielen, max. Schritte 604, Gesamtmenge Futter: 329, Gesamt-Schritte: 18957, Anzahl der `if`-Anweisungen: 3
+* B⸻: bestes Ergebnis 5 in 100 Spielen, max. Schritte 205, Gesamtmenge Futter: 22, Gesamt-Schritte: 12727, Anzahl der `if`-Anweisungen: 5
+* N⸻: bestes Ergebnis 11 in 100 Spielen, max. Schritte 412, Gesamtmenge Futter: 76, Gesamt-Schritte: 8940, Anzahl der `if`-Anweisungen: 8
 
 In der Regel kann man erkennen, dass das Ergebnis besser wird, je mehr Bedingungen oder Situationen im Algorithmus berücksichtigt werden. Das drückt sich häufig durch die Anzahl der `if`/`elif` Abfragen aus.
 
@@ -291,5 +290,48 @@ Die Aufgabe ist bereits in der Präsentation beschrieben: schreibe eine Funktion
 * die Situation aus leeren und belegten Feldern in eine Zahl umrechnet
 * und dabei bestimmte Felder ausmaskieren (auslassen) kann
 
+## Dienstag, 31.3.2020
 
+### Aufgabe: Entscheidungen sammeln
+
+Wir haben ein Programm geschrieben, das Entscheidungen für bestimmte Situationen aufzeichnen und abspeichern kann. Dieses Programm ist kompatibel zu der Art und Weise, wie wir die Situation in eine Nummer umrechnen. Allerdings gilt es nun, 2^8 Felder * 5 Richtungen, also für 1280 Fälle die Entscheidungen einzusammeln. Diese Arbeit teilen wir uns. 
+
+Die grafische Oberfläche dafür sieht folgendermaßen aus:
+
+ ![Entscheidungs-Recorder](images/decisionrecorder.png)
+
+Zu sehen ist ein 3x3 Ausschnitt aus dem Spielfeld. Der dunkelrote Winkel zeigt an, in welcher Richtung sich das Futter befindet. In diesem Fall liegt das Futter auf jeden Fall südlich, es könnte aber zusätzlich noch ein bisschen östlich liegen, vielleicht aber auch westlich. Dass der rote Ausschnitt eher nach Westen zeigt, ist dabei kein Anzeichen für eine höhere Wahrscheinlichkeit, dass das Futter im Westen liegt.
+
+Welche Aktion die Schlange in dieser Situation auslösen soll, bestimmst Du. Folgende Kriterien sind zu beachten:
+
+* Die Schlange soll keinesfalls sterben. Fahre also nicht in den Schwanz der Schlange.
+* Die Schlange sollte möglichst schnell zum Futter kommen.
+
+Da der rote Bereich sowohl westlich als auch östlich liegt, ist weder Osten noch Westen im gezeigten Fall eine gute Wahl. Wenn die Schlange allerdings nach Süden fährt, wird irgendwann die Ausprägung zwischen Ost oder West deutlicher:
+
+* Verschiebung nach Osten, falls das Futter tatsächlich östlich lag:
+  ![](images/ostverschiebung.png)
+
+* Verschiebung nach Westen, falls das Futter tatsächlich westlich lag:
+  ![](images/westverschiebung.png)
+
+Da das Programm alle Möglichkeiten durchgeht, können Situationen angezeigt werden, die im Spiel nie vorkommen können, beispielsweise:
+
+ ![Unmögliche Situation](images/impossible.png)
+
+Es muss mindestens ein grünes Kästchen an das blaue Kästchen anschließen, da die Schlange nicht diagonal laufen kann. Für diesen Fall ist der Button "Impossible" gedacht.
+
+Beachte aber, dass nicht alle diagonal aussehenden Felder unmöglich sind. Folgendes Feld beispielsweise ist legal:
+
+ ![Mögliches Spielfeld](images/possible.png)
+
+weil das Spielfeld so aussehen könnte:
+
+ ![](images/possible_field.png)
+
+Damit wir eine gegenseitige Kontrolle haben, sollten sich die Fälle überlappen. Somit ergeben sich für jeden Schüler 640 Entscheidungen.
+
+* D⸻: Situation 0 bis 640
+* B⸻: Situation 641 bis 1280
+* N⸻: Situation 641 bis 1280
 
