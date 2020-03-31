@@ -7,6 +7,12 @@ BLOCKED = 2
 
 
 class LookAroundHead(Algorithm):
+    """
+
+
+    Best result: 47
+    """
+
     def __init__(self):
         super().__init__()
 
