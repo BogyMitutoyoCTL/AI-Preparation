@@ -8,7 +8,7 @@ from Field import Field
 class Algorithm:
     def __init__(self):
         self.model = None
-        self.reward_system:RewardSystem = None
+        self.reward_system: RewardSystem = None
 
     """
     This is the base class / interface for an algorithm.
@@ -83,8 +83,7 @@ class Visual(Algorithm):
     def train(self, info: GameData, action, reward) -> None:
         return self.decider.train(info, action, reward)
 
-    def visualize(self, data: GameData, training:TrainingData):
-
+    def visualize(self, data: GameData, training: TrainingData):
         layer = self.decider.visualize(data, training)
         self.vis.reset()
         self.vis.display_visualization_stats()
