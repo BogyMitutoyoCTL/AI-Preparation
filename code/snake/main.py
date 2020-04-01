@@ -85,7 +85,7 @@ if __name__ == "__main__":
     env: SnakeGym = gym.make("mitusnake-v0")
 
     training_data: TrainingData = env.training_data
-    training_data.max_epochs = 100
+    training_data.max_epochs = 1000
     training_data.verbose = True
 
     algorithm = choose_algorithm()
