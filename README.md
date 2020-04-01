@@ -332,6 +332,61 @@ weil das Spielfeld so aussehen könnte:
 Damit wir eine gegenseitige Kontrolle haben, sollten sich die Fälle überlappen. Somit ergeben sich für jeden Schüler 640 Entscheidungen.
 
 * D⸻: Situation 0 bis 640
-* B⸻: Situation 641 bis 1280
+
+* B⸻: Situation 0 bis 640
+
 * N⸻: Situation 641 bis 1280
+
+* L⸻: Situation 641 bis 1280
+
+## Dienstag Nachmittag
+
+Aufgabe: Algorithmus programmieren, der die aufgezeichneten Entscheidungen aus den JSON Dateien einliest und dann gemäß diesen Entscheidungen spielt.
+
+Diese Aufgabe konnten wir mit den Daten vom Vormittag gut umsetzen. Dabei haben wir noch eine Endlosschleife erkannt, die durch eine Folge von Entscheidungen reproduziert werden konnte. Ein kurzer Eingriff in diese Datei behob die Schleife und die Schlange erreichte sehr gute Ergebnisse.
+
+Ein kurzes Video war noch am Abend [auf Instagram zu sehen](https://www.instagram.com/p/B-aXMAdKDBe/).
+
+## Mittwoch, 1.4.2020
+
+Am Mittwoch Vormittag haben wir den Code aufgeräumt, damit wir ihn leichter anpassen können.
+
+Dabei haben wir erste Prinzipien des [Clean Code](https://clean-code-developer.de) angewandt und sog. Refactorings ausgeführt, die uns helfen, unseren Code besser verständlich zu machen.
+
+Wir haben weiterhin einen Teil des Vormittages damit verbracht zu verstehen, warum sich unsere Projektumgebung immer wieder in die Haare bekommt, obwohl wir bereits die [Empfehlungen von Jetbrains](https://www.jetbrains.com/help/pycharm/creating-and-managing-projects.html) berücksichtigt haben. Schließlich haben wir uns bei [Gitignore.io](https://www.gitignore.io/) eine andere `.gitignore`-Datei [generiert](https://www.gitignore.io/api/python,windows,virtualenv,pycharm+all), die hoffentlich unsere Probleme löst.
+
+## Mittwoch Nachmittag
+
+Am Nachmittag waren wir dann soweit, dass wir unseren Code so ändern konnten, dass wir weg von vordefinierten Entscheidungen in Richtung Machine Learning (ML)  gehen konnten.
+
+Wir haben dazu unsere 2-dimensionale Struktur so überarbeitet, dass eine 3D-Struktur entstanden ist, die Werte für die Zuversichtlichkeit von Aktionen aufnimmt. Diese Werte haben wir mit einem Mittelwert von 0,5 initialisiert und in der Feedback-Phase entweder erhöht oder erniedrigt, je nach dem, ob eine Aktion erfolgreich war oder sich schlecht auf die Lebensdauer der Schlange auswirkte.
+
+Der letzte Schritt des Tages bestand darin, die 3D-Struktur abzuspeichern und wieder zu laden, so dass die Schlange nicht immer von Neuem anfangen muss zu lernen. Hier stellte sich das Dateiformat JSON als zu langsam heraus, um in jeder Runde gespeichert zu werden. Schließlich sind wir bei `pickle` gelandet und haben erst nach einer gewissen Anzahl Lernschritten gespeichert, anstatt am Ende jedes Spiels. Die Dateigröße beträgt bei einem 5x5 Spielfeld und 5 Blickrichtungen ca. 230 MB.
+
+## Donnerstag, 2.4.2020
+
+Wir haben kurz besprochen, welchen Typ Machine Learning wir bisher angewandt haben: es handelte sich um [Q-Learning (engl. Wikipedia)](https://en.wikipedia.org/wiki/Q-learning) mit der Strategie [SARS (Präsentation)](presentation/SARS.pptx), einem Vorgänger von [SARSA (engl. Wikipedia)](https://en.wikipedia.org/wiki/State%E2%80%93action%E2%80%93reward%E2%80%93state%E2%80%93action).
+
+Die besten Ergebnisse unserer Implementierung waren:
+
+D⸻: Länge 46 nach 11.414.612 Schritten in 100.000 Spielen, bei einer Gesamtmenge von 1.068.307 gegessenem Futter. Trainingsdauer: 5:25h
+
+B⸻: Länge 45
+
+Wir haben dann diskutiert, welche Möglichkeiten es noch geben könnte, um bessere / andere Ergebnisse zu erzielen. Das wären:
+
+* Wir könnten die Trainingsdauer verlängern. Es ist anzunehmen, dass noch nicht alle möglichen 5.000.000 Möglichkeiten ausreichend von der Schlange erkundet wurden.
+* Wir könnten das Sichtfeld und die Blickrichtungen anpassen, d.h. den State ändern. Siehe hierzu auch die Präsentation [SARS](presentation/SARS.pptx)
+* Hin und wieder zufällige Aktionen ausführen, um neue Wege zu entdecken, die die Schlange noch nie beschritten hat.
+  Dieser Ansatz ist im Machine Learning bekannt und wird über die Variable ε (Epsilon) gesteuert.
+* Wir könnten die Aktionen nicht gleichmäßig mit 0.5 vordefinieren, sondern Zufallswerte nutzen.
+  Bei neuronalen Netzen ist dies der Fall.
+* Wir könnten die Belohnungen und Bestrafungen anders verrechnen oder das Belohnungssystem anpassen. Beispielsweise haben wir die Schlange nicht bestraft, wenn sie vom Futter wegläuft.
+* Die letzte Aktion eines Spiels führt zwar zum unmittelbaren Tod der Schlange und wird bestraft. Die fatale Entscheidung wurde vielleicht jedoch schon zuvor getroffen, als die Schlange z.B. in eine Sackgasse lief. Die "Bestrafung" für den Tod der Schlange könnte auf die vorherigen Aktionen übertragen werden.
+  Auch dieser Ansatz ist bekannt. Es handelt sich um die Erweiterung von SARS auf SARSA. Das Prinzip ähnelt ein wenig der [Backpropagation (engl. Wikipedia)](https://de.wikipedia.org/wiki/Backpropagation), wobei dieser Begriff für neuronale Netze reserviert ist, die wir nicht einsetzen.
+* Wir könnten aufhören, weitere Erfahrungen für eine Situation zu verarbeiten, falls für diese Situation schon eine gewisse Menge Erfahrungen gesammelt wurden. Das könnte verhindern, dass gute Entscheidungen aus der Anfangsphase später revidiert werden.
+
+All diese Möglichkeiten könnte man ausprobieren, sofern man genügend Zeit hätte. Eine ähnliche Situation gibt es später auch bei neuronalen Netzen. Dort nennt man das Hyper-Parameter.
+
+
 
