@@ -4,7 +4,7 @@ from SaveCombinations import SaveCombinations
 from TrainingDataGui import TrainingDataGui
 
 configuration_file = "configuration.json"
-output_file = "output.json"
+output_file = "outputNina.json"
 
 if __name__ == "__main__":
     configuration = Configuration(configuration_file)
