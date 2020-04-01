@@ -68,27 +68,35 @@ def show_gui(state):
         time_of_last_visualization = datetime.now()
 
 
-if __name__ == "__main__":
-    from gym.envs.registration import register
-
-    register(id='mitusnake-v0', entry_point='SnakeGym:SnakeEnv', )
-    env: SnakeGym = gym.make("mitusnake-v0")
-
-    training_data: TrainingData = env.training_data
-    training_data.max_epochs = 10
-    training_data.verbose = True
-
+def create_reward_system():
     reward_system = RewardSystem()
     reward_system.reward_eat_food = 1.0
     reward_system.reward_killed_by_wall = -0.1
     reward_system.reward_killed_by_tail = -0.2
     reward_system.reward_killed_by_starving_function = lambda steps, length: -0.1 / length
-    reward_system.reward_closer_function = lambda distance: 0.05 if distance> 0 else -0.05
+    reward_system.reward_closer_function = lambda distance: 0.05 if distance > 0 else -0.05
     reward_system.additional_steps_function = lambda width, height, length: (1 + length / 10) * (width + height) + 200
-    env.reward = reward_system
+    return reward_system
+
+
+if __name__ == "__main__":
+    from gym.envs.registration import register
+    register(id='mitusnake-v0', entry_point='SnakeGym:SnakeEnv', )
+    env: SnakeGym = gym.make("mitusnake-v0")
+
+    training_data: TrainingData = env.training_data
+    training_data.max_epochs = 100
+    training_data.verbose = True
 
     algorithm = choose_algorithm()
-    algorithm.reward_system = reward_system
+
+    if algorithm.reward_system is not None:
+        # Algorithm knows how he wants to be rewarded, so let's do it his way
+        env.reward = algorithm.reward_system
+    else:
+        env.reward = create_reward_system()
+        algorithm.reward_system = env.reward
+
     algorithm = Visual(algorithm)
     randomness_algorithm = RandomChoice()
 
@@ -104,7 +112,6 @@ if __name__ == "__main__":
             action = get_action_considering_epsilon(state, training_data, epoch, randomness_algorithm)
             state_before, reward, done, info = env.step(action)
             algorithm.train(state_before, action, reward)
-
 
         model, fitness = algorithm.epochfinished()
 
