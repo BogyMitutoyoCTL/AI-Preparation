@@ -83,8 +83,7 @@ class Visual(Algorithm):
     def train(self, info: GameData, action, reward) -> None:
         return self.decider.train(info, action, reward)
 
-    def visualize(self, data: GameData, training:TrainingData):
-
+    def visualize(self, data: GameData, training: TrainingData):
         layer = self.decider.visualize(data, training)
         self.vis.reset()
         self.vis.display_visualization_stats()
@@ -92,3 +91,6 @@ class Visual(Algorithm):
         self.vis.display_game(data)
         self.vis.add_layer(layer)
         self.vis.tick()
+
+    def epsilon(self, epoch: int, maxepochs: int) -> float:
+        return self.decider.epsilon(epoch, maxepochs)
