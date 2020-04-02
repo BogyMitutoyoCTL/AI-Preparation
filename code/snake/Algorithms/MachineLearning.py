@@ -158,3 +158,9 @@ class MachineLearning(Algorithm):
                 pickle.dump(self.würfel, datei)
             self.last_saved_iq = self.iq
         return None, 0.0
+
+    def epsilon(self, epoch: int, maxepochs: int) -> float:
+        if epoch < maxepochs/2:
+            return 0.3
+
+        return 0
