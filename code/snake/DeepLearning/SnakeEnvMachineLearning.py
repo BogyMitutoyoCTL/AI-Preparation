@@ -46,4 +46,4 @@ class SnakeEnvMachineLearning(gym.Env):
 
     def render(self, mode='human', close=False) -> None:
         self.basegym.render(mode, close)
-        pygame.time.Clock().tick(10)
+        pygame.time.Clock().tick(1000)
