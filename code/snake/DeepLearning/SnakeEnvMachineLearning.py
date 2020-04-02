@@ -1,5 +1,6 @@
 import gym
 import numpy
+import pygame
 
 import SnakeGym
 
@@ -45,3 +46,4 @@ class SnakeEnvMachineLearning(gym.Env):
 
     def render(self, mode='human', close=False) -> None:
         self.basegym.render(mode, close)
+        pygame.time.Clock().tick(10)
