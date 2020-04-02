@@ -77,6 +77,7 @@ class Visualization:
         self._print_in_window(f"Best steps walked: {training.best_steps_walked}")
         self._print_in_window(f"Total training steps (all epochs): {training.total_steps_walked}")
         self._print_in_window(f"Total food eaten (all epochs): {training.total_food_eaten}")
+        self._print_in_window(f"Average food eaten (all epochs): {round((training.total_food_eaten / training.epoch) * 1000) / 1000}")
         self._print_in_window(f"ε : {int(training.epsilon * 100)}%")
         self._print_in_window("")
 
