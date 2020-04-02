@@ -79,6 +79,13 @@ def create_reward_system():
     return reward_system
 
 
+def write_statistic_for_epoch(training_data: TrainingData):
+    with open("statistik.csv", "a+") as datei:
+        datei.write(str(training_data.epoch) + ";")
+        datei.write(str(training_data.last_score) + ";")
+        datei.write(str(training_data.number_of_steps_walked) + ";\n")
+
+
 if __name__ == "__main__":
     from gym.envs.registration import register
     register(id='mitusnake-v0', entry_point='SnakeGym:SnakeEnv', )
@@ -87,6 +94,8 @@ if __name__ == "__main__":
     training_data: TrainingData = env.training_data
     training_data.max_epochs = 1000
     training_data.verbose = True
+
+    write_statistic = True
 
     algorithm = choose_algorithm()
 
@@ -114,5 +123,8 @@ if __name__ == "__main__":
             algorithm.train(state_before, action, reward)
 
         model, fitness = algorithm.epochfinished()
+
+        if write_statistic:
+            write_statistic_for_epoch(training_data)
 
     print(training_data)
