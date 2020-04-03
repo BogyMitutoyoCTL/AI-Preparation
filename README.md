@@ -388,5 +388,30 @@ Wir haben dann diskutiert, welche Möglichkeiten es noch geben könnte, um besse
 
 All diese Möglichkeiten könnte man ausprobieren, sofern man genügend Zeit hätte. Eine ähnliche Situation gibt es später auch bei neuronalen Netzen. Dort nennt man das Hyper-Parameter.
 
+Wir haben uns mit der Präsentation [Neuronale Netze](presentation/Neuronale%20Netze.pptx) mit der Grundidee eines Neurons vertraut gemacht, sowie mit den wichtigsten Optionen, wie ein neuronales Netz aufgebaut werden kann. 
 
+## Donnerstag Nachmittag
+
+Anhand des sehr anschaulichen Beispiel auf [playground.tensorflow.org](https://playground.tensorflow.org) und der Excel-Tabelle [Neuron Mathematik](presentation/Neuron%20Mathematik.xlsx) haben wir die Funktion eines Neurons und von Netzen hoffentlich gut verstanden.
+
+Nach dieser Einführung haben wir dann die bekannte Spielumgebung des Q-Learning verlassen und haben einen `DQNAgent` benutzt, der von sich aus schon weiß, wie er ein `Gym` benutzen muss. Mit einem Deep Network haben wir versucht, die Schlange zu trainieren.
+
+Die Ergebnisse gehen deutlich über den Zufall hinaus, sind aber mit einer Bestlänge von 15 nach 50.000 Trainingsschritten auch noch nicht berauschend. Allerdings war zumindest die durchschnittliche Anzahl gefressenen Futters noch ansteigend. Das Hinzufügen eines zusätzlichen Layers erhöhte die maximale Länge dann immerhin auf 18.
+
+## Freitag, 3.4.2020
+
+Auch beim Deep Leaning mit neuronalem Netzwerk lassen sich die trainierten Daten abspeichern und wieder laden. Wir haben kurz über die Vor- und Nachteile des Datenformats des neuronalen Netzes gesprochen und mit unserem Modell des Q-Learning verglichen. Die Punkte sind:
+
+* unser Modell war 230 MB groß. Dagegen ist unser einfaches Deep Network lediglich 388 kB groß
+* unser 3D-Modell mit Gewichtungen ist auf andere Spielfeldgrößen übertragbar. 
+
+Ein anschauliches Beispiel für Convolution hat uns die [Webseite von Adam Harley](https://www.cs.ryerson.ca/~aharley/vis/conv/) geliefert. Dort ist dreidimensional und interaktiv dargestellt, wie die einzelnen Flächen miteinander verrechnet werden.
+
+Wir haben ein `Gym` für Convolution aufgebaut, doch leider ist es uns nicht gelungen, Convolution in unserem Netzwerk zu nutzen.
+
+Die Teilnehmer haben sich dann Gedanken gemacht, wie wir die Ergebnisse des BOGY in der Abschlussbesprechung präsentieren.
+
+## Freitag Nachmittag
+
+Um 13 Uhr fand dann eine Abschlussbesprechung statt, in der wir die Meinung der Praktikanten zum BOGY abgefragt haben und den Teilnehmern Feedback zu Ihrer Mitarbeit im Praktikum gegeben haben. Die Zeugnisse konnten wir aufgrund des Corona-Virus nicht direkt persönlich übergeben und auch die Raspberry Pis müssen etwas verzögert zugestellt werden.
 
