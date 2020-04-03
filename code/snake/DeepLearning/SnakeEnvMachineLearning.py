@@ -1,5 +1,4 @@
 import gym
-import numpy
 import pygame
 
 import SnakeGym
@@ -16,7 +15,6 @@ class SnakeEnvMachineLearning(gym.Env):
     def step(self, action) -> (list, float, bool, set):
         obs, rew, done, _ = self.basegym.step(action)
         return self.head_view(obs), rew, done, {}
-        # return self.reduce(obs.field.field), rew, done, {}
 
     def head_view(self, info) -> list:
         surrounding = []
@@ -32,16 +30,8 @@ class SnakeEnvMachineLearning(gym.Env):
                 surrounding.append(0.0)
         return surrounding
 
-    def reduce(self, field):
-        a = numpy.array(field)
-        a = -a[..., 0] + a[..., 1] + a[..., 2]
-        return a
-        # normalized = a / (numpy.max(a) - numpy.min(a))
-        # return normalized
-
     def reset(self):
         obs = self.basegym.reset()
-        # return self.reduce(obs.field.field)
         return self.head_view(obs)
 
     def render(self, mode='human', close=False) -> None:

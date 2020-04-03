@@ -1,3 +1,5 @@
+import glob
+
 import gym
 import tensorflow
 from rl.agents import DQNAgent
@@ -11,6 +13,7 @@ from tensorflow.python.keras.layers import Dense, Flatten
 from tensorflow.python.keras.optimizers import Adam
 
 from DeepLearning.SnakeEnvMachineLearning import SnakeEnvMachineLearning
+from TrainingData import TrainingData
 
 WINDOW_LENGTH = 1
 
@@ -24,7 +27,7 @@ class DeepAgent:
     Best result: ???
     """
 
-    def __init__(self, shape, initial_randomness: float, action_count: int):
+    def __init__(self, shape, action_count: int):
         super().__init__()
 
         inp = Input(shape=shape)
@@ -42,15 +45,12 @@ class DeepAgent:
         self.memory = SequentialMemory(limit=50000, window_length=WINDOW_LENGTH)
         self.policy = LinearAnnealedPolicy(EpsGreedyQPolicy(), attr='eps', value_max=1., value_min=.1, value_test=.05, nb_steps=1000)
         self.callbacks = self.build_callbacks("msnake")
-        self.dqn = DQNAgent(model=self.model, nb_actions=action_count, memory=self.memory, nb_steps_warmup=20, target_model_update=1e-2, policy=self.policy)
+        self.dqn = DQNAgent(model=self.model, nb_actions=action_count, memory=self.memory, nb_steps_warmup=50, target_model_update=1e-2, policy=self.policy)
 
         Adam._name = "fix_bug"  # https://github.com/keras-rl/keras-rl/issues/345
         # Metrics: mae, mse, accuracy
         # LR: learning rate
         self.dqn.compile(Adam(lr=1e-5), metrics=['mse'])
-
-        self.batch = []
-        self.initial_randomness = initial_randomness
 
     def build_callbacks(self, env_name):
         callbacks = []
@@ -86,10 +86,13 @@ if __name__ == "__main__":
     # https://stackoverflow.com/questions/53429896/how-do-i-disable-tensorflows-eager-execution
     tensorflow.compat.v1.disable_eager_execution()
 
-    #agent = DeepAgent((WINDOW_LENGTH, 20, 10), 0.5, 4)
-    agent = DeepAgent((WINDOW_LENGTH, 25+12), 0.05, 4)
-    agent.dqn.fit(env, nb_steps=5000, visualize=True, verbose=2)
-    agent.dqn.save_weights("dqn_mitusnakeml-v0_weights.h5f", overwrite=True)
-    agent.dqn.test(env, nb_episodes=20, visualize=True)
-    input("Done")
-
+    agent = DeepAgent((WINDOW_LENGTH, env.observation_space.n), env.action_space.n)
+    dateiname = "dqn_mitusnakeml-v0_weights.h5f"
+    if len(glob.glob(dateiname)) > 0:
+        agent.dqn.load_weights(dateiname)
+    agent.dqn.fit(env, nb_steps=350000, visualize=True, verbose=2)
+    print(env.basegym.training_data)
+    env.basegym.training_data = TrainingData()
+    agent.dqn.save_weights(dateiname, overwrite=True)
+    agent.dqn.test(env, nb_episodes=500, visualize=True)
+    print(env.basegym.training_data)
