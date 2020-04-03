@@ -1,3 +1,5 @@
+import glob
+
 import gym
 import tensorflow
 from rl.agents import DQNAgent
@@ -11,6 +13,7 @@ from tensorflow.python.keras.layers import Dense, Flatten
 from tensorflow.python.keras.optimizers import Adam
 
 from DeepLearning.SnakeEnvMachineLearning import SnakeEnvMachineLearning
+from TrainingData import TrainingData
 
 WINDOW_LENGTH = 1
 
@@ -83,8 +86,13 @@ if __name__ == "__main__":
     # https://stackoverflow.com/questions/53429896/how-do-i-disable-tensorflows-eager-execution
     tensorflow.compat.v1.disable_eager_execution()
 
-    agent = DeepAgent((WINDOW_LENGTH, 25+12), 4)
-    agent.dqn.fit(env, nb_steps=5000, visualize=True, verbose=2)
-    agent.dqn.save_weights("dqn_mitusnakeml-v0_weights.h5f", overwrite=True)
-    agent.dqn.test(env, nb_episodes=20, visualize=True)
+    agent = DeepAgent((WINDOW_LENGTH, env.observation_space.n), env.action_space.n)
+    dateiname = "dqn_mitusnakeml-v0_weights.h5f"
+    if len(glob.glob(dateiname)) > 0:
+        agent.dqn.load_weights(dateiname)
+    agent.dqn.fit(env, nb_steps=350000, visualize=True, verbose=2)
+    print(env.basegym.training_data)
+    env.basegym.training_data = TrainingData()
+    agent.dqn.save_weights(dateiname, overwrite=True)
+    agent.dqn.test(env, nb_episodes=500, visualize=True)
     print(env.basegym.training_data)
