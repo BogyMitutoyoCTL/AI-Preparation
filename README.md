@@ -392,7 +392,7 @@ Wir haben uns mit der Präsentation [Neuronale Netze](presentation/Neuronale%20N
 
 ## Donnerstag Nachmittag
 
-Anhand des sehr anschaulichen Beispiel auf [playground.tensorflow.org](https://playground.tensorflow.org) und der Excel-Tabelle [Neuron Mathematik](presentation/Neuron%20Mathematik.xlsx) haben wir die Funktion eines Neurons und von Netzen hoffentlich gut verstanden.
+Anhand des sehr anschaulichen Beispiel auf [playground.tensorflow.org](https://playground.tensorflow.org) und der Excel-Tabelle [Neuronales Netz Mathematik](presentation/NeuronalesNetz_tanh.xlsx) haben wir die Funktion eines Neurons und von Netzen hoffentlich gut verstanden und konnten die Berechnungen der Webseite nachvollziehen.
 
 Nach dieser Einführung haben wir dann die bekannte Spielumgebung des Q-Learning verlassen und haben einen `DQNAgent` benutzt, der von sich aus schon weiß, wie er ein `Gym` benutzen muss. Mit einem Deep Network haben wir versucht, die Schlange zu trainieren.
 
@@ -400,7 +400,7 @@ Die Ergebnisse gehen deutlich über den Zufall hinaus, sind aber mit einer Bestl
 
 ## Freitag, 3.4.2020
 
-Auch beim Deep Leaning mit neuronalem Netzwerk lassen sich die trainierten Daten abspeichern und wieder laden. Wir haben kurz über die Vor- und Nachteile des Datenformats des neuronalen Netzes gesprochen und mit unserem Modell des Q-Learning verglichen. Die Punkte sind:
+Auch beim Deep Learning mit neuronalem Netzwerk lassen sich die trainierten Daten abspeichern und wieder laden. Wir haben kurz über die Vor- und Nachteile des Datenformats des neuronalen Netzes gesprochen und mit unserem Modell des Q-Learning verglichen. Die Punkte sind:
 
 * unser Modell war 230 MB groß. Dagegen ist unser einfaches Deep Network lediglich 388 kB groß
 * unser 3D-Modell mit Gewichtungen ist auf andere Spielfeldgrößen übertragbar. 
