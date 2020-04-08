@@ -1,6 +1,7 @@
 # Do not remove "from Algorithms import *". It's needed for reflection
 from Algorithms import *
 from Algorithms.Algorithms import Algorithm
+import sys
 import gym
 import pygame
 import random
@@ -67,6 +68,11 @@ def show_gui(state):
         pygame.event.pump()
         time_of_last_visualization = datetime.now()
 
+def check_exit_cross()-> bool:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            return True
+
 
 def create_reward_system():
     reward_system = RewardSystem()
@@ -114,6 +120,11 @@ if __name__ == "__main__":
     for epoch in range(training_data.max_epochs):
         env.reset()
         done = False
+
+        if check_exit_cross():
+            pygame.quit()
+            exit()
+
 
         while not done:
             state: GameData = env.game.get_info()
