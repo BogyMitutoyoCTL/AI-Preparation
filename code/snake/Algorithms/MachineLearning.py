@@ -1,5 +1,6 @@
 import glob
 import json
+import random
 import os
 import pickle
 from Algorithms.Algorithms import Algorithm
@@ -54,7 +55,7 @@ class MachineLearning(Algorithm):
         return aktion
 
     def beste_aktion_wählen(self, säule):
-        maximum = 0
+        maximum = -1
         position_des_maximums = -1
         for position in range(len(säule)):
             zuversichtlichkeit = säule[position]
@@ -79,7 +80,7 @@ class MachineLearning(Algorithm):
             for blickrichtung in range(self.anzahl_blickrichtungen):
                 säule = []
                 for aktion in range(4):
-                    säule.append(0.5)
+                    säule.append(random.uniform(0.4,0.6))
                 scheibe.append(säule)
             würfel.append(scheibe)
         return würfel
@@ -137,23 +138,19 @@ class MachineLearning(Algorithm):
         scheibe = self.würfel[situation]
         säule = scheibe[essensrichtung]
 
-        if säule == [0.5, 0.5, 0.5, 0.5] and reward != 0:
-            self.iq += 1
-            print("Wieder was gelernt! ", self.iq)
-
         if reward == 1:
             säule[aktionsnummer] *= 1.1
+            self.iq += 1
+            print("Wieder was gelernt! ", self.iq)
             if säule[aktionsnummer] > 1:
                 säule[aktionsnummer] = 1
         elif reward == 0:
             pass
         else:  # -1
-            säule[aktionsnummer] *= 0.9
-            if säule[aktionsnummer] < 0.01:
-                säule[aktionsnummer] = 0.01
+            säule[aktionsnummer] = 0.0
 
     def epochfinished(self) -> (object, float):
-        if self.iq > self.last_saved_iq + 50:
+        if self.iq > self.last_saved_iq + 1000:
             with open(self.dateiname, "wb") as datei:
                 pickle.dump(self.würfel, datei)
             self.last_saved_iq = self.iq
